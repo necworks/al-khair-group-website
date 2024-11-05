@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL KHAIR GROUP of COMPANIES</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Full-page background styling */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Background image container */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+
+        /* Overlay for smooth transition between background images */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* dark overlay for better text readability */
+            z-index: -1;
+            opacity: 1; /* Start with full opacity */
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Semi-transparent header and footer */
+        .navbar, .footer {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Increased header font size and padding */
+        .navbar-brand {
+            font-size: 36px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        /* Overlay styling for sections */
+        .section-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .section-content {
+            position: relative;
+            z-index: 1;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        /* Product Cards */
+        .product-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            color: white;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .product-card img {
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Footer styling to match header */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background Slideshow Container -->
+<div id="bgContainer" class="bg-container"></div>
+<!-- Overlay for smooth fade effect -->
+<div id="bgOverlay" class="bg-overlay"></div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">AL KHAIR GROUP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Banner Section -->
+<section id="home" class="section-overlay text-center">
+    <div class="section-content">
+        <h2>Premium Quality Rice for the World</h2>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="section-overlay">
+    <div class="container section-content text-center">
+        <h2 class="mb-5">Our Products</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="basmati.jpg" class="card-img-top" alt="Basmati Rice">
+                    <div class="card-body">
+                        <h5 class="card-title">Basmati Rice</h5>
+                        <p class="card-text">Long grain, aromatic rice known for its exquisite taste.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="jasmine.jpg" class="card-img-top" alt="Jasmine Rice">
+                    <div class="card-body">
+                        <h5 class="card-title">Jasmine Rice</h5>
+                        <p class="card-text">Soft, slightly sticky rice with a floral aroma.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="rice-field.jpg" class="card-img-top" alt="Sushi Rice">
+                    <div class="card-body">
+                        <h5 class="card-title">Sushi Rice</h5>
+                        <p class="card-text">Short grain, sticky rice perfect for sushi and Asian dishes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="section-overlay">
+    <div class="container section-content">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="text-center lead">AL KHAIR GROUP of COMPANIES is a leading supplier of high-quality rice products worldwide. With a commitment to quality and excellence, we strive to deliver the finest varieties of rice for our global customers.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-overlay">
+    <div class="container section-content">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form action="#" method="post" class="mx-auto" style="max-width: 600px;">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 AL KHAIR GROUP of COMPANIES. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Background Slideshow JavaScript -->
+<script>
+    const bgContainer = document.getElementById('bgContainer');
+    const bgOverlay = document.getElementById('bgOverlay');
+    const images = ['bgimage.jpg', 'bgimage2.jpg', 'bgimage3.jpg', 'bgimage4.jpg'];
+    let index = 0;
+
+    // Set the initial background image
+    bgContainer.style.backgroundImage = `url(${images[index]})`;
+
+    function changeBackground() {
+        index = (index + 1) % images.length;
+
+        // Fade out the overlay
+        bgOverlay.style.opacity = 1;
+
+        // After fade-out completes, change background and fade-in the overlay
+        setTimeout(() => {
+            bgContainer.style.backgroundImage = `url(${images[index]})`;
+            bgOverlay.style.opacity = 0; // Fade in overlay
+        }, 1000); // Change the background after 1 second
+    }
+
+    setInterval(changeBackground, 3000); // Change image every 3 seconds
+</script>
+
+</body>
+</html>
